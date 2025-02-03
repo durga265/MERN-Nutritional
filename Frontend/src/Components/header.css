@@ -1,0 +1,58 @@
+/* Fixed Navbar at the top of the screen */
+.nav {
+  display: flex;
+  justify-content: space-evenly; /* Space items evenly */
+  align-items: center; /* Vertically center the items */
+  background-color: #03305e; /* Background color for the navbar */
+  padding: 10px 30px; /* Padding to give space around the elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays on top */
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.nav li {
+  list-style-type: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav li:hover {
+  color: #d79353; /* Color change on hover */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none; /* Remove the underline from the links */
+}
+
+.nav .logout {
+  color: #e74c3c; /* Red color for the logout button */
+}
+
+.nav .logout:hover {
+  color: #c0392b; /* Darker red color on hover */
+}
+
+/* Prevent content from being hidden behind the fixed navbar */
+body {
+  padding-top: 60px; /* Adjust for navbar height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* Stack the items vertically on smaller screens */
+    gap: 20px; /* Add spacing between items */
+    padding: 15px;
+  }
+
+  .nav li {
+    font-size: 16px;
+  }
+}

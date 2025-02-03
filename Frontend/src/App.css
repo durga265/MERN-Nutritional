@@ -1,0 +1,267 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures full height of screen */
+  width: 100%; /* Ensures full width of screen */
+  background-color: #161616; /* Background color for entire screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Adjust width as needed */
+  max-width: 400px; /* Restrict max width */
+  
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.form 
+{
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: flex-start;
+}
+
+.inp 
+{
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  text-indent: 20px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.btn 
+{
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: #167ce0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #167ce0;
+  cursor: pointer;
+}
+
+.btn:hover
+{
+  background-color: #5395d7;
+}
+
+a 
+{
+  color: #167ce0;
+  text-decoration: none;
+}
+
+
+.not-found 
+{
+  width: 100%;
+  text-align: center;
+ 
+} 
+
+
+.success
+{
+  background-color: lightgreen;
+  color: green;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.error
+{
+  background-color: lightpink;
+  color: red;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.invisible-msg 
+{
+  
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+}
+/* Fixed Navbar at the top of the screen */
+.nav {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;  /* Vertically center the items */
+  background-color: #03305e;  /* Background color for the navbar */
+  padding: 10px 30px;  /* Padding to give space around the elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;  /* Ensure it stays on top */
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+}
+
+.nav li {
+  list-style-type: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav li:hover {
+  color: #d79353;  /* Color change on hover */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;  /* Remove the underline from the links */
+}
+
+.nav .logout {
+  color: #e74c3c;  /* Red color for the logout button */
+}
+
+.nav .logout:hover {
+  color: #c0392b;  /* Darker red color on hover */
+}
+
+/* Prevent content from being hidden behind the fixed navbar */
+body {
+  padding-top: 60px;  /* Adjust for navbar height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;  /* Stack the items vertically on smaller screens */
+    gap: 20px;  /* Add spacing between items */
+    padding: 15px;
+  }
+
+  .nav li {
+    font-size: 16px;
+  }
+}
+
+
+/* track page css  */
+/* General styling for the container */
+.container {
+  padding-top: 80px; /* Adds space for the fixed navbar */
+}
+
+/* Styling for the header section */
+.header-section {
+  position: fixed; /* Fixes the header section at the top of the screen */
+  top: 60px; /* Pushes it below the navbar */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: left;
+  margin-top: 60px;
+  margin-left: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+  z-index: 999; /* Makes sure it stays above the content */
+}
+
+/* Main heading styles */
+.heading {
+  font-size: 2.5rem;
+  color: #167ce0; /* Bright blue color for the heading */
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  margin-bottom: 10px;
+}
+
+/* Subtitle styles */
+.subheading {
+  font-size: 1.2rem;
+  color: #b8b8b8; /* Light gray for subtitle */
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Styling for the search bar */
+.search {
+  position: fixed; /* Fixes the search bar at the top of the page */
+  top: 260px;/* Pushes it below the header section */
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow to the search bar */
+  z-index: 998; /* Ensures it stays above the content */
+}
+
+.search-inp {
+  padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  /* border: 2px solid #ccc; */
+  border-radius: 5px;
+}
+
+.search-results {
+  margin-top: 10px;
+}
+
+.item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Ensure the rest of the content isn't covered by the fixed header */
+body {
+  padding-top: 80px; /* Adjust for header height */
+}
+
+/* Optional: Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .search-inp {
+    width: 90%; /* Adjust search bar width on smaller screens */
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+}
+
+
+
+.diet-container
+{
+  align-items: flex-start;
+  row-gap: 20px;
+  flex-direction: column;
+}
+
+.item 
+{
+  width: 100%;
+  padding: 20px;
+  background-color: #2f2f2f;
+}
+

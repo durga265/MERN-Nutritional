@@ -1,0 +1,78 @@
+.container {
+    position: relative; /* Make this the reference point for positioning if needed */
+    height: 100vh; /* Full screen height */
+  }
+  
+  .food {
+    position: fixed; /* Keeps the element fixed relative to the viewport */
+    top: 70px;
+    right: 100px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* .food-img {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .food-image {
+    max-width: 100%;
+    border-radius: 8px;
+  } */
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color:#555;
+  }
+  
+  .nutrient {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .n-title {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .n-value {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .track-control {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .inp {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
